@@ -59,7 +59,7 @@ int main(){
 
     while (s != NULL)
     {
-        bool Swith = false;
+        bool Switch = false;
 
         for (int i = 0; i < strlen(s); i++)
         {   
@@ -68,16 +68,16 @@ int main(){
             {
                 if (s[i] == ArrOfChar[j])
                 {
-                    Swith = true;
+                    Switch = true;
                     break;
                 }
-                else if (j == count-1)Swith = false;
+                else if (j == count-1)Switch = false;
             }
             
-            if(!Swith)break;
+            if(!Switch)break;
         }
 
-        if(Swith)cout<<s<<"\n";
+        if(Switch)cout<<s<<"\n";
 
         s = strtok(NULL,   delimiters);
     }

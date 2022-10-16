@@ -5,4 +5,4 @@
 // In a given sentence, find a pair of words, of which one is the appeal of the other.
 
 
-//  >skip---------------------------------->
+//  >skip

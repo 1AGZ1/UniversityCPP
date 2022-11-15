@@ -8,7 +8,7 @@ using namespace std;
 void table(int a, int b){
     
     for(int i = a; i < (b + 1); i++){
-        cout << "|" << i << "|";
+        cout << "|" << i << "|\t";
         if(i < 2){
             cout << "|" << 0 << "|";
         }else if((i > 1) && (i < 11)){

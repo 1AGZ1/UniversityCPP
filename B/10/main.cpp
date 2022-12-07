@@ -3,18 +3,22 @@
 using namespace std;
 
 int n;
- 
+
+//
 int partition(float arr[], int start, int end){
- 
+    // POINTER TO START OF ARR
     int pivot = arr[start];
  
+    
     int count = 0;
-    for (int i = start + 1; i <= end; i++) {
+    for (int i = start + 1; i < end + 1; i++) {
         if (arr[i] <= pivot)
             count++;
     }
  
+
     int pivotIndex = start + count;
+
     swap(arr[pivotIndex], arr[start]);
  
     int i = start, j = end;
@@ -36,8 +40,9 @@ int partition(float arr[], int start, int end){
  
     return pivotIndex;
 }
- 
-void quickSort(float arr[], int start, int end){
+
+//QUICKSORT
+void quickSort(float arr[], int start, int end)-{
  
     if (start >= end)
         return;
@@ -48,12 +53,26 @@ void quickSort(float arr[], int start, int end){
  
     quickSort(arr, p + 1, end);
 }
- 
-int main(){
+
+//INIT ARR
+float* new_arr(){
     cout<<"Enter N as number of elements in array b: "<<endl;
     cin>>n;
 
-    float b[n-1];
+    return (new float [n-1]);
+}
+
+//PRINT ARR
+void ptint_arr(const float* arr){
+    cout<<"##############################\n";
+    for (int i = 0; i < n; i++) {
+        cout << arr[i] << " ";
+    }
+    cout<<"\n##############################\n";
+}
+
+int main(){
+    float* b = new_arr();
 
     for(int i = 0; i < n; i++){
         cout<<"Enter \""<<i+1<<"\" element of array b:"<<endl;
@@ -62,9 +81,7 @@ int main(){
 
     quickSort(b, 0, n - 1);
  
-    for (int i = 0; i < n; i++) {
-        cout << b[i] << " ";
-    }
+    ptint_arr(b);
  
  	system("pause");
     return 0;

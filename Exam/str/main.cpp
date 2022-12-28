@@ -48,11 +48,11 @@ char* subtr(char* src, char* src_) {
 }
 
 myClass operator + (myClass a, myClass b){
-    return plus_fun(a.prn, b.prn);
+    return plus_fun(a.prn(), b.prn());
 }
 
 myClass operator - (myClass a, myClass b){
-    return subtr(a.prn, b.prn);
+    return subtr(a.prn(), b.prn());
 }
 
 
